@@ -1172,6 +1172,64 @@ spacing: 4 holes (with body offset)
 </deviceset>
 </devicesets>
 </library>
+<library name="gm-caps-film-box">
+<description>&lt;b&gt;Capacitors, Film, Box&lt;/b&gt;
+&lt;ul&gt;
+&lt;li&gt;1000pF - 2.2uF  (uF = µF = mF)
+&lt;li&gt;popular nonpolarized capacitors because they are small
+&lt;li&gt;these have short leads so that pad spacing equals lead spacing
+&lt;li&gt;e.g., WIMA capacitors
+&lt;/ul&gt;</description>
+<packages>
+<package name="072X035">
+<description>&lt;b&gt;7.2mm x 3.5mm&lt;/b&gt;
+&lt;p&gt;WIMA MKP2, MKS2</description>
+<wire x1="-3.6" y1="1.75" x2="3.6" y2="1.75" width="0.1524" layer="21"/>
+<wire x1="3.6" y1="1.75" x2="3.6" y2="-1.75" width="0.1524" layer="21"/>
+<wire x1="3.6" y1="-1.75" x2="-3.6" y2="-1.75" width="0.1524" layer="21"/>
+<wire x1="-3.6" y1="-1.75" x2="-3.6" y2="1.75" width="0.1524" layer="21"/>
+<wire x1="-2.54" y1="0" x2="-2.5654" y2="0" width="0.6096" layer="51"/>
+<wire x1="2.54" y1="0" x2="2.5654" y2="0" width="0.6096" layer="51"/>
+<pad name="1" x="-2.54" y="0" drill="0.7"/>
+<pad name="2" x="2.54" y="0" drill="0.7"/>
+<text x="-1.828" y="-0.523" size="1.27" layer="25" ratio="12">&gt;NAME</text>
+<text x="-2.228" y="-3.3368" size="1.27" layer="27" ratio="12">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="C">
+<wire x1="0" y1="0" x2="0" y2="0.508" width="0.1524" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="2.032" width="0.1524" layer="94"/>
+<text x="1.524" y="2.921" size="1.778" layer="95">&gt;NAME</text>
+<text x="1.524" y="-2.159" size="1.778" layer="96">&gt;VALUE</text>
+<rectangle x1="-2.032" y1="1.524" x2="2.032" y2="2.032" layer="94"/>
+<rectangle x1="-2.032" y1="0.508" x2="2.032" y2="1.016" layer="94"/>
+<pin name="1" x="0" y="5.08" visible="off" length="short" direction="pas" swaplevel="1" rot="R270"/>
+<pin name="2" x="0" y="-2.54" visible="off" length="short" direction="pas" swaplevel="1" rot="R90"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="072X035" prefix="C" uservalue="yes">
+<description>&lt;b&gt;0.15 - 1.0uF;&lt;/b&gt;
+&lt;p&gt;&lt;u&gt;WIMA &lt;/u&gt;&lt;br&gt;
+MKP2 63, 100V: 0.047uF; MKS2 50V: 0.68 - 1.0uF; 63V: 0.33 - 0.47uF; 100V: 0.15 - 0.22uF;</description>
+<gates>
+<gate name="G$1" symbol="C" x="0" y="-1.27"/>
+</gates>
+<devices>
+<device name="2" package="072X035">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1192,6 +1250,19 @@ spacing: 4 holes (with body offset)
 <part name="D2" library="gm-diodes" deviceset="1N400X" device=".3"/>
 <part name="R2" library="gm-resistors" deviceset="6MM" device=".4"/>
 <part name="C1" library="gm-caps-electro-pol" deviceset="080" device=""/>
+<part name="C2" library="gm-caps-film-box" deviceset="072X035" device="2"/>
+<part name="R3" library="gm-resistors" deviceset="6MM" device=".4"/>
+<part name="R4" library="gm-resistors" deviceset="6MM" device=".4"/>
+<part name="C3" library="gm-caps-electro-pol" deviceset="080" device=""/>
+<part name="JK_V+" library="wirepad" deviceset="WIREPAD" device="2,54/0,8"/>
+<part name="GND" library="wirepad" deviceset="WIREPAD" device="2,54/0,8"/>
+<part name="BD_V/2" library="wirepad" deviceset="WIREPAD" device="2,54/0,8"/>
+<part name="BD_V+" library="wirepad" deviceset="WIREPAD" device="2,54/0,8"/>
+<part name="GND1" library="wirepad" deviceset="WIREPAD" device="2,54/0,8"/>
+<part name="GND2" library="wirepad" deviceset="WIREPAD" device="2,54/0,8"/>
+<part name="GND3" library="wirepad" deviceset="WIREPAD" device="2,54/0,8"/>
+<part name="GND4" library="wirepad" deviceset="WIREPAD" device="2,54/0,8"/>
+<part name="GND5" library="wirepad" deviceset="WIREPAD" device="2,54/0,8"/>
 </parts>
 <sheets>
 <sheet>
@@ -1206,8 +1277,21 @@ spacing: 4 holes (with body offset)
 <instance part="D1" gate="G$1" x="114.3" y="68.58" rot="MR180"/>
 <instance part="R1" gate="G$1" x="93.98" y="68.58"/>
 <instance part="D2" gate="1" x="17.78" y="81.28"/>
-<instance part="R2" gate="G$1" x="35.56" y="81.28"/>
+<instance part="R2" gate="G$1" x="30.48" y="81.28"/>
 <instance part="C1" gate="G$1" x="45.72" y="78.74"/>
+<instance part="C2" gate="G$1" x="53.34" y="76.2"/>
+<instance part="R3" gate="G$1" x="30.48" y="66.04" rot="R90"/>
+<instance part="R4" gate="G$1" x="30.48" y="50.8" rot="R90"/>
+<instance part="C3" gate="G$1" x="22.86" y="53.34"/>
+<instance part="JK_V+" gate="G$1" x="2.54" y="81.28"/>
+<instance part="GND" gate="G$1" x="5.08" y="45.72"/>
+<instance part="BD_V/2" gate="G$1" x="15.24" y="55.88"/>
+<instance part="BD_V+" gate="G$1" x="15.24" y="71.12"/>
+<instance part="GND1" gate="G$1" x="5.08" y="38.1"/>
+<instance part="GND2" gate="G$1" x="5.08" y="30.48"/>
+<instance part="GND3" gate="G$1" x="5.08" y="22.86"/>
+<instance part="GND4" gate="G$1" x="5.08" y="15.24"/>
+<instance part="GND5" gate="G$1" x="5.08" y="7.62"/>
 </instances>
 <busses>
 </busses>
@@ -1266,8 +1350,66 @@ spacing: 4 holes (with body offset)
 <wire x1="73.66" y1="68.58" x2="73.66" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$7" class="0">
+<net name="N$8" class="0">
 <segment>
+<pinref part="D2" gate="1" pin="C"/>
+<wire x1="20.32" y1="81.28" x2="25.4" y2="81.28" width="0.1524" layer="91"/>
+<pinref part="R2" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="N$9" class="0">
+<segment>
+<pinref part="R2" gate="G$1" pin="2"/>
+<pinref part="C1" gate="G$1" pin="+"/>
+<wire x1="35.56" y1="81.28" x2="45.72" y2="81.28" width="0.1524" layer="91"/>
+<pinref part="C2" gate="G$1" pin="1"/>
+<wire x1="45.72" y1="81.28" x2="53.34" y2="81.28" width="0.1524" layer="91"/>
+<junction x="45.72" y="81.28"/>
+<wire x1="35.56" y1="81.28" x2="35.56" y2="73.66" width="0.1524" layer="91"/>
+<junction x="35.56" y="81.28"/>
+<pinref part="R3" gate="G$1" pin="2"/>
+<wire x1="35.56" y1="73.66" x2="30.48" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="73.66" x2="30.48" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="D1" gate="G$1" pin="A"/>
+<wire x1="119.38" y1="68.58" x2="119.38" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="78.74" x2="60.96" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="78.74" x2="60.96" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="81.28" x2="53.34" y2="81.28" width="0.1524" layer="91"/>
+<junction x="53.34" y="81.28"/>
+<pinref part="BD_V+" gate="G$1" pin="P"/>
+<wire x1="17.78" y1="71.12" x2="25.4" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="71.12" x2="25.4" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="73.66" x2="30.48" y2="73.66" width="0.1524" layer="91"/>
+<junction x="30.48" y="73.66"/>
+</segment>
+</net>
+<net name="N$10" class="0">
+<segment>
+<pinref part="R3" gate="G$1" pin="1"/>
+<pinref part="R4" gate="G$1" pin="2"/>
+<wire x1="30.48" y1="60.96" x2="30.48" y2="55.88" width="0.1524" layer="91"/>
+<pinref part="C3" gate="G$1" pin="+"/>
+<wire x1="22.86" y1="55.88" x2="30.48" y2="55.88" width="0.1524" layer="91"/>
+<junction x="30.48" y="55.88"/>
+<pinref part="BD_V/2" gate="G$1" pin="P"/>
+<wire x1="17.78" y1="55.88" x2="22.86" y2="55.88" width="0.1524" layer="91"/>
+<junction x="22.86" y="55.88"/>
+</segment>
+</net>
+<net name="N$11" class="0">
+<segment>
+<pinref part="C3" gate="G$1" pin="-"/>
+<wire x1="22.86" y1="48.26" x2="22.86" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="R4" gate="G$1" pin="1"/>
+<wire x1="22.86" y1="45.72" x2="30.48" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="45.72" x2="43.18" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="45.72" x2="43.18" y2="73.66" width="0.1524" layer="91"/>
+<junction x="30.48" y="45.72"/>
+<pinref part="C1" gate="G$1" pin="-"/>
+<wire x1="43.18" y1="73.66" x2="45.72" y2="73.66" width="0.1524" layer="91"/>
+<pinref part="C2" gate="G$1" pin="2"/>
+<wire x1="45.72" y1="73.66" x2="53.34" y2="73.66" width="0.1524" layer="91"/>
+<junction x="45.72" y="73.66"/>
 <pinref part="U$1" gate="G$1" pin="A2"/>
 <wire x1="60.96" y1="55.88" x2="60.96" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="A1"/>
@@ -1276,13 +1418,38 @@ spacing: 4 holes (with body offset)
 <pinref part="U$1" gate="G$1" pin="B1"/>
 <wire x1="48.26" y1="50.8" x2="48.26" y2="55.88" width="0.1524" layer="91"/>
 <junction x="48.26" y="55.88"/>
+<wire x1="45.72" y1="73.66" x2="48.26" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="73.66" x2="48.26" y2="60.96" width="0.1524" layer="91"/>
+<junction x="48.26" y="60.96"/>
+<pinref part="GND" gate="G$1" pin="P"/>
+<wire x1="7.62" y1="45.72" x2="22.86" y2="45.72" width="0.1524" layer="91"/>
+<junction x="22.86" y="45.72"/>
+<pinref part="GND1" gate="G$1" pin="P"/>
+<wire x1="7.62" y1="38.1" x2="22.86" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="38.1" x2="22.86" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="GND2" gate="G$1" pin="P"/>
+<wire x1="7.62" y1="30.48" x2="22.86" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="30.48" x2="22.86" y2="38.1" width="0.1524" layer="91"/>
+<junction x="22.86" y="38.1"/>
+<pinref part="GND3" gate="G$1" pin="P"/>
+<wire x1="7.62" y1="22.86" x2="22.86" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="22.86" x2="22.86" y2="30.48" width="0.1524" layer="91"/>
+<junction x="22.86" y="30.48"/>
+<pinref part="GND4" gate="G$1" pin="P"/>
+<wire x1="7.62" y1="15.24" x2="22.86" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="15.24" x2="22.86" y2="22.86" width="0.1524" layer="91"/>
+<junction x="22.86" y="22.86"/>
+<pinref part="GND5" gate="G$1" pin="P"/>
+<wire x1="7.62" y1="7.62" x2="22.86" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="7.62" x2="22.86" y2="15.24" width="0.1524" layer="91"/>
+<junction x="22.86" y="15.24"/>
 </segment>
 </net>
-<net name="N$8" class="0">
+<net name="N$7" class="0">
 <segment>
-<pinref part="D2" gate="1" pin="C"/>
-<wire x1="20.32" y1="81.28" x2="30.48" y2="81.28" width="0.1524" layer="91"/>
-<pinref part="R2" gate="G$1" pin="1"/>
+<pinref part="JK_V+" gate="G$1" pin="P"/>
+<pinref part="D2" gate="1" pin="A"/>
+<wire x1="5.08" y1="81.28" x2="12.7" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
