@@ -3,4 +3,7 @@
 # Backup files:
 *.l#*
 *.s#*
+*.b#*
+*~
+
 
