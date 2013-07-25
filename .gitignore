@@ -6,4 +6,9 @@
 *.b#*
 *~
 
+# LTSpice files:
+*.net
+*.log
+*.raw
+
 
