@@ -1861,16 +1861,15 @@ MKP2 63, 100V: 0.047uF; MKS2 50V: 0.68 - 1.0uF; 63V: 0.33 - 0.47uF; 100V: 0.15 -
 <part name="TC1044S" library="gm-ics" deviceset="DIL8" device=""/>
 <part name="DDUB1" library="gm-diodes" deviceset="1N47XX" device="3"/>
 <part name="DDUB2" library="gm-diodes" deviceset="1N47XX" device="3"/>
-<part name="CDUB1" library="gm-caps-electro-pol" deviceset="050" device="" value="10u"/>
-<part name="CDUB2" library="gm-caps-electro-pol" deviceset="050" device="" value="10u"/>
+<part name="CDUB1" library="gm-caps-electro-pol" deviceset="050" device="1" value="10u"/>
+<part name="CDUB2" library="gm-caps-electro-pol" deviceset="050" device="1" value="10u"/>
 <part name="G8" library="wirepad" deviceset="WIREPAD" device="2,15/1,0" value="WIREPAD2,15/1,0"/>
 <part name="9IN2" library="wirepad" deviceset="WIREPAD" device="2,15/1,0" value="WIREPAD2,15/1,0"/>
 <part name="18" library="wirepad" deviceset="WIREPAD" device="2,15/1,0" value="WIREPAD2,15/1,0"/>
 <part name="G6" library="wirepad" deviceset="WIREPAD" device="2,15/1,0" value="WIREPAD2,15/1,0"/>
-<part name="RIN" library="gm-resistors" deviceset="6MM" device=".2"/>
 <part name="ROUT" library="gm-resistors" deviceset="6MM" device=".2"/>
-<part name="CINV1" library="gm-caps-electro-pol" deviceset="050" device="" value="10u"/>
-<part name="CINV2" library="gm-caps-electro-pol" deviceset="050" device="" value="10u"/>
+<part name="CINV1" library="gm-caps-electro-pol" deviceset="050" device="1" value="10u"/>
+<part name="CINV2" library="gm-caps-electro-pol" deviceset="050" device="1" value="10u"/>
 <part name="9IN3" library="wirepad" deviceset="WIREPAD" device="2,15/1,0" value="WIREPAD2,15/1,0"/>
 <part name="G9" library="wirepad" deviceset="WIREPAD" device="2,15/1,0" value="WIREPAD2,15/1,0"/>
 <part name="C10" library="gm-caps-electro-pol" deviceset="080" device="" value="100u"/>
@@ -1882,6 +1881,7 @@ MKP2 63, 100V: 0.047uF; MKS2 50V: 0.68 - 1.0uF; 63V: 0.33 - 0.47uF; 100V: 0.15 -
 <part name="R2" library="gm-resistors" deviceset="6MM" device=".3" value="3K3"/>
 <part name="R6" library="gm-resistors" deviceset="6MM" device=".3" value="4M7"/>
 <part name="D1" library="gm-diodes" deviceset="1N4148" device="-3"/>
+<part name="RIN" library="gm-resistors" deviceset="6MM" device=".2"/>
 </parts>
 <sheets>
 <sheet>
@@ -1909,7 +1909,7 @@ Divider</text>
 <instance part="BDO" gate="G$1" x="93.98" y="22.86" rot="R180"/>
 <instance part="LED" gate="G$1" x="73.66" y="76.2" rot="MR90"/>
 <instance part="RLED" gate="G$1" x="73.66" y="66.04" rot="R90"/>
-<instance part="RVIN" gate="G$1" x="48.26" y="81.28"/>
+<instance part="RVIN" gate="G$1" x="20.32" y="93.98"/>
 <instance part="CIN1" gate="G$1" x="53.34" y="73.66"/>
 <instance part="CIN2" gate="G$1" x="58.42" y="71.12"/>
 <instance part="RV/2A" gate="G$1" x="25.4" y="66.04" rot="R90"/>
@@ -1918,7 +1918,7 @@ Divider</text>
 <instance part="VIN" gate="G$1" x="-20.32" y="93.98"/>
 <instance part="G0" gate="G$1" x="5.08" y="45.72"/>
 <instance part="V/2" gate="G$1" x="2.54" y="55.88"/>
-<instance part="BDV" gate="G$1" x="63.5" y="88.9" rot="R180"/>
+<instance part="BDV" gate="G$1" x="53.34" y="104.14" rot="R270"/>
 <instance part="G1" gate="G$1" x="5.08" y="38.1"/>
 <instance part="G2" gate="G$1" x="5.08" y="30.48"/>
 <instance part="G3" gate="G$1" x="5.08" y="22.86"/>
@@ -1933,7 +1933,6 @@ Divider</text>
 <instance part="9IN2" gate="G$1" x="144.78" y="71.12" rot="R180"/>
 <instance part="18" gate="G$1" x="215.9" y="53.34" rot="R180"/>
 <instance part="G6" gate="G$1" x="5.08" y="-2.54"/>
-<instance part="RIN" gate="G$1" x="30.48" y="27.94"/>
 <instance part="ROUT" gate="G$1" x="30.48" y="17.78"/>
 <instance part="CINV1" gate="1" x="144.78" y="50.8"/>
 <instance part="CINV2" gate="1" x="180.34" y="43.18" rot="R180"/>
@@ -1948,6 +1947,7 @@ Divider</text>
 <instance part="R2" gate="G$1" x="-2.54" y="76.2" rot="R90"/>
 <instance part="R6" gate="G$1" x="-10.16" y="88.9" rot="R90"/>
 <instance part="D1" gate="G$1" x="-22.86" y="55.88" rot="R90"/>
+<instance part="RIN" gate="G$1" x="30.48" y="27.94"/>
 </instances>
 <busses>
 </busses>
@@ -2081,7 +2081,6 @@ Divider</text>
 <pinref part="ROUT" gate="G$1" pin="1"/>
 <wire x1="25.4" y1="17.78" x2="22.86" y2="17.78" width="0.1524" layer="91"/>
 <junction x="22.86" y="17.78"/>
-<pinref part="RIN" gate="G$1" pin="1"/>
 <wire x1="25.4" y1="27.94" x2="22.86" y2="27.94" width="0.1524" layer="91"/>
 <junction x="22.86" y="27.94"/>
 <wire x1="7.62" y1="45.72" x2="7.62" y2="50.8" width="0.1524" layer="91"/>
@@ -2099,6 +2098,7 @@ Divider</text>
 <wire x1="-2.54" y1="50.8" x2="7.62" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="-2.54" y1="55.88" x2="-2.54" y2="50.8" width="0.1524" layer="91"/>
 <junction x="-2.54" y="50.8"/>
+<pinref part="RIN" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="9INDUBINV" class="0">
@@ -2121,20 +2121,23 @@ Divider</text>
 <pinref part="C10" gate="G$1" pin="+"/>
 <wire x1="129.54" y1="50.8" x2="129.54" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="129.54" y1="60.96" x2="142.24" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="CIN1" gate="G$1" pin="+"/>
-<pinref part="CIN2" gate="G$1" pin="1"/>
-<wire x1="53.34" y1="76.2" x2="58.42" y2="76.2" width="0.1524" layer="91"/>
-<pinref part="RVIN" gate="G$1" pin="2"/>
-<junction x="53.34" y="76.2"/>
 <pinref part="BDV" gate="G$1" pin="P"/>
-<wire x1="60.96" y1="88.9" x2="53.34" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="53.34" y1="88.9" x2="53.34" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="53.34" y1="76.2" x2="53.34" y2="81.28" width="0.1524" layer="91"/>
-<wire x1="60.96" y1="88.9" x2="60.96" y2="101.6" width="0.1524" layer="91"/>
-<junction x="60.96" y="88.9"/>
-<wire x1="60.96" y1="101.6" x2="142.24" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="101.6" x2="142.24" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="142.24" y1="101.6" x2="142.24" y2="78.74" width="0.1524" layer="91"/>
 <junction x="142.24" y="78.74"/>
+<wire x1="53.34" y1="93.98" x2="25.4" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="93.98" x2="25.4" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="RV/2A" gate="G$1" pin="2"/>
+<pinref part="RVIN" gate="G$1" pin="2"/>
+<junction x="25.4" y="93.98"/>
+<wire x1="53.34" y1="101.6" x2="53.34" y2="93.98" width="0.1524" layer="91"/>
+<junction x="53.34" y="101.6"/>
+<junction x="53.34" y="93.98"/>
+<pinref part="CIN2" gate="G$1" pin="1"/>
+<pinref part="CIN1" gate="G$1" pin="+"/>
+<wire x1="53.34" y1="76.2" x2="58.42" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="76.2" x2="53.34" y2="93.98" width="0.1524" layer="91"/>
+<junction x="53.34" y="76.2"/>
 </segment>
 </net>
 <net name="N$13" class="0">
@@ -2214,22 +2217,6 @@ Divider</text>
 <wire x1="-10.16" y1="93.98" x2="-7.62" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$25" class="0">
-<segment>
-<pinref part="RVIN" gate="G$1" pin="1"/>
-<pinref part="LED" gate="G$1" pin="A"/>
-<wire x1="73.66" y1="81.28" x2="73.66" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="93.98" x2="25.4" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="25.4" y1="93.98" x2="25.4" y2="81.28" width="0.1524" layer="91"/>
-<junction x="25.4" y="81.28"/>
-<wire x1="25.4" y1="81.28" x2="43.18" y2="81.28" width="0.1524" layer="91"/>
-<pinref part="RV/2A" gate="G$1" pin="2"/>
-<wire x1="25.4" y1="71.12" x2="25.4" y2="81.28" width="0.1524" layer="91"/>
-<pinref part="PNP1" gate="G$1" pin="C"/>
-<wire x1="2.54" y1="93.98" x2="25.4" y2="93.98" width="0.1524" layer="91"/>
-<junction x="25.4" y="93.98"/>
-</segment>
-</net>
 <net name="N$7" class="0">
 <segment>
 <pinref part="PNP1" gate="G$1" pin="B"/>
@@ -2249,7 +2236,6 @@ Divider</text>
 </net>
 <net name="N$8" class="0">
 <segment>
-<pinref part="RIN" gate="G$1" pin="2"/>
 <pinref part="U$1" gate="G$1" pin="B2"/>
 <wire x1="60.96" y1="50.8" x2="60.96" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="53.34" x2="83.82" y2="53.34" width="0.1524" layer="91"/>
@@ -2259,6 +2245,7 @@ Divider</text>
 <wire x1="35.56" y1="27.94" x2="83.82" y2="27.94" width="0.1524" layer="91"/>
 <wire x1="83.82" y1="27.94" x2="83.82" y2="33.02" width="0.1524" layer="91"/>
 <junction x="83.82" y="33.02"/>
+<pinref part="RIN" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$11" class="0">
@@ -2271,6 +2258,18 @@ Divider</text>
 <junction x="73.66" y="22.86"/>
 <wire x1="35.56" y1="17.78" x2="73.66" y2="17.78" width="0.1524" layer="91"/>
 <wire x1="73.66" y1="17.78" x2="73.66" y2="22.86" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="LED" gate="G$1" pin="A"/>
+<wire x1="73.66" y1="81.28" x2="73.66" y2="111.76" width="0.1524" layer="91"/>
+<pinref part="PNP1" gate="G$1" pin="C"/>
+<pinref part="RVIN" gate="G$1" pin="1"/>
+<wire x1="15.24" y1="93.98" x2="2.54" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="111.76" x2="15.24" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="15.24" y1="111.76" x2="15.24" y2="93.98" width="0.1524" layer="91"/>
+<junction x="15.24" y="93.98"/>
 </segment>
 </net>
 </nets>
