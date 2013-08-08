@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.02" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -68,6 +68,8 @@
 <text x="41.148" y="5.334" size="1.016" layer="22" font="vector" rot="MR0">FOOTSWITCH BD</text>
 <text x="32.004" y="47.752" size="1.016" layer="22" font="vector" rot="MR0">Rev 1.0 GJC</text>
 <text x="0.508" y="5.08" size="1.27" layer="22" font="vector" rot="MR90">DOUBLER/INVERTER</text>
+<text x="44.704" y="33.528" size="1.016" layer="25">+9</text>
+<text x="46.736" y="33.528" size="1.016" layer="25">GND</text>
 </plain>
 <libraries>
 <library name="pedal_parts">
@@ -1040,6 +1042,361 @@ design rules under a new name.</description>
 <wire x1="26.67" y1="32.258" x2="32.092975" y2="32.258" width="0.6096" layer="1"/>
 <wire x1="32.092975" y1="32.258" x2="32.5419875" y2="32.0720125" width="0.6096" layer="1" curve="-45"/>
 <wire x1="32.5419875" y1="32.0720125" x2="33.828" y2="30.786" width="0.6096" layer="1"/>
+</signal>
+<signal name="N$3">
+<via x="2.54" y="48.26" extent="1-16" drill="0.9"/>
+<via x="48.26" y="48.26" extent="1-16" drill="0.9"/>
+<wire x1="2.54" y1="48.26" x2="48.26" y2="48.26" width="0.6096" layer="16"/>
+</signal>
+<signal name="N$12">
+<via x="5.08" y="48.26" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$16">
+<via x="7.62" y="48.26" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$17">
+<via x="10.16" y="48.26" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$18">
+<via x="12.7" y="48.26" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$20">
+<via x="15.24" y="48.26" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$21">
+<via x="17.78" y="48.26" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$23">
+<via x="20.32" y="48.26" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$25">
+<via x="22.86" y="48.26" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$26">
+<via x="25.4" y="48.26" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$27">
+<via x="27.94" y="48.26" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$28">
+<via x="30.48" y="48.26" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$29">
+<via x="33.02" y="48.26" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$30">
+<via x="35.56" y="48.26" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$31">
+<via x="38.1" y="48.26" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$32">
+<via x="40.64" y="48.26" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$33">
+<via x="43.18" y="48.26" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$34">
+<via x="45.72" y="48.26" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$36">
+<via x="48.26" y="45.72" extent="1-16" drill="0.9"/>
+<via x="2.54" y="45.72" extent="1-16" drill="0.9"/>
+<wire x1="48.26" y1="45.72" x2="2.54" y2="45.72" width="0.6096" layer="16"/>
+</signal>
+<signal name="N$37">
+<via x="45.72" y="45.72" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$38">
+<via x="43.18" y="45.72" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$39">
+<via x="40.64" y="45.72" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$40">
+<via x="38.1" y="45.72" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$41">
+<via x="35.56" y="45.72" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$42">
+<via x="33.02" y="45.72" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$43">
+<via x="30.48" y="45.72" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$44">
+<via x="27.94" y="45.72" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$45">
+<via x="25.4" y="45.72" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$46">
+<via x="22.86" y="45.72" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$47">
+<via x="20.32" y="45.72" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$48">
+<via x="17.78" y="45.72" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$49">
+<via x="15.24" y="45.72" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$50">
+<via x="12.7" y="45.72" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$51">
+<via x="10.16" y="45.72" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$52">
+<via x="7.62" y="45.72" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$53">
+<via x="5.08" y="45.72" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$55">
+<via x="2.54" y="43.18" extent="1-16" drill="0.9"/>
+<via x="48.26" y="43.18" extent="1-16" drill="0.9"/>
+<wire x1="2.54" y1="43.18" x2="48.26" y2="43.18" width="0.6096" layer="16"/>
+</signal>
+<signal name="N$56">
+<via x="5.08" y="43.18" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$57">
+<via x="7.62" y="43.18" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$58">
+<via x="10.16" y="43.18" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$59">
+<via x="12.7" y="43.18" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$60">
+<via x="15.24" y="43.18" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$61">
+<via x="17.78" y="43.18" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$62">
+<via x="20.32" y="43.18" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$63">
+<via x="22.86" y="43.18" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$64">
+<via x="25.4" y="43.18" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$65">
+<via x="27.94" y="43.18" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$66">
+<via x="30.48" y="43.18" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$67">
+<via x="33.02" y="43.18" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$68">
+<via x="35.56" y="43.18" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$69">
+<via x="38.1" y="43.18" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$70">
+<via x="40.64" y="43.18" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$71">
+<via x="43.18" y="43.18" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$72">
+<via x="45.72" y="43.18" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$74">
+<via x="48.26" y="40.64" extent="1-16" drill="0.9"/>
+<via x="2.54" y="40.64" extent="1-16" drill="0.9"/>
+<wire x1="48.26" y1="40.64" x2="2.54" y2="40.64" width="0.6096" layer="16"/>
+</signal>
+<signal name="N$75">
+<via x="45.72" y="40.64" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$76">
+<via x="43.18" y="40.64" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$77">
+<via x="40.64" y="40.64" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$78">
+<via x="38.1" y="40.64" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$79">
+<via x="35.56" y="40.64" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$80">
+<via x="33.02" y="40.64" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$81">
+<via x="30.48" y="40.64" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$82">
+<via x="27.94" y="40.64" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$83">
+<via x="25.4" y="40.64" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$84">
+<via x="22.86" y="40.64" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$85">
+<via x="20.32" y="40.64" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$86">
+<via x="17.78" y="40.64" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$87">
+<via x="15.24" y="40.64" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$88">
+<via x="12.7" y="40.64" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$89">
+<via x="10.16" y="40.64" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$90">
+<via x="7.62" y="40.64" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$91">
+<via x="5.08" y="40.64" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$93">
+<via x="2.54" y="38.1" extent="1-16" drill="0.9"/>
+<via x="48.26" y="38.1" extent="1-16" drill="0.9"/>
+<wire x1="2.54" y1="38.1" x2="48.26" y2="38.1" width="0.6096" layer="16"/>
+</signal>
+<signal name="N$94">
+<via x="5.08" y="38.1" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$95">
+<via x="7.62" y="38.1" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$96">
+<via x="10.16" y="38.1" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$97">
+<via x="12.7" y="38.1" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$98">
+<via x="15.24" y="38.1" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$99">
+<via x="17.78" y="38.1" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$100">
+<via x="20.32" y="38.1" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$101">
+<via x="22.86" y="38.1" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$102">
+<via x="25.4" y="38.1" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$103">
+<via x="27.94" y="38.1" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$104">
+<via x="30.48" y="38.1" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$105">
+<via x="33.02" y="38.1" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$106">
+<via x="35.56" y="38.1" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$107">
+<via x="38.1" y="38.1" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$108">
+<via x="40.64" y="38.1" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$109">
+<via x="43.18" y="38.1" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$110">
+<via x="45.72" y="38.1" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$112">
+<via x="48.26" y="35.56" extent="1-16" drill="0.9"/>
+<wire x1="48.26" y1="35.56" x2="48.26" y2="33.02" width="0.6096" layer="16"/>
+</signal>
+<signal name="N$113">
+<via x="45.72" y="35.56" extent="1-16" drill="0.9"/>
+<wire x1="45.72" y1="35.56" x2="45.72" y2="33.02" width="0.6096" layer="1"/>
+</signal>
+<signal name="N$115">
+<via x="40.64" y="35.56" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$116">
+<via x="38.1" y="35.56" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$117">
+<via x="35.56" y="35.56" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$118">
+<via x="33.02" y="35.56" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$119">
+<via x="30.48" y="35.56" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$120">
+<via x="27.94" y="35.56" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$121">
+<via x="25.4" y="35.56" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$122">
+<via x="22.86" y="35.56" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$123">
+<via x="20.32" y="35.56" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$124">
+<via x="17.78" y="35.56" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$125">
+<via x="15.24" y="35.56" extent="1-16" drill="0.9"/>
+<via x="43.18" y="35.56" extent="1-16" drill="0.9"/>
+<wire x1="15.24" y1="35.56" x2="43.18" y2="35.56" width="0.6096" layer="16"/>
+</signal>
+<signal name="N$126">
+<via x="15.24" y="33.02" extent="1-16" drill="0.9"/>
+<via x="20.32" y="33.02" extent="1-16" drill="0.9"/>
+<wire x1="15.24" y1="33.02" x2="20.32" y2="33.02" width="0.6096" layer="16"/>
+</signal>
+<signal name="N$127">
+<via x="17.78" y="33.02" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$130">
+<via x="17.78" y="30.48" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$131">
+<via x="15.24" y="30.48" extent="1-16" drill="0.9"/>
+<via x="20.32" y="30.48" extent="1-16" drill="0.9"/>
+<wire x1="15.24" y1="30.48" x2="20.32" y2="30.48" width="0.6096" layer="16"/>
+</signal>
+<signal name="N$133">
+<via x="17.78" y="27.94" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$134">
+<via x="20.32" y="27.94" extent="1-16" drill="0.9"/>
+<via x="15.24" y="27.94" extent="1-16" drill="0.9"/>
+<wire x1="20.32" y1="27.94" x2="15.24" y2="27.94" width="0.6096" layer="16"/>
+</signal>
+<signal name="N$136">
+<via x="17.78" y="25.4" extent="1-16" drill="0.9"/>
+</signal>
+<signal name="N$137">
+<via x="15.24" y="25.4" extent="1-16" drill="0.9"/>
+<via x="20.32" y="25.4" extent="1-16" drill="0.9"/>
+<wire x1="15.24" y1="25.4" x2="20.32" y2="25.4" width="0.6096" layer="16"/>
 </signal>
 </signals>
 </board>
