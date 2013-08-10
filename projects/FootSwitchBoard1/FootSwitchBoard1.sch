@@ -2000,11 +2000,6 @@ Divider</text>
 <junction x="17.78" y="55.88"/>
 </segment>
 </net>
-<net name="-9GND" class="0">
-<segment>
-<wire x1="198.12" y1="-12.7" x2="198.12" y2="-15.24" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="GDUBINV" class="0">
 <segment>
 <pinref part="G9" gate="G$1" pin="P"/>
@@ -2099,6 +2094,9 @@ Divider</text>
 <wire x1="-2.54" y1="55.88" x2="-2.54" y2="50.8" width="0.1524" layer="91"/>
 <junction x="-2.54" y="50.8"/>
 <pinref part="RIN" gate="G$1" pin="1"/>
+<pinref part="TC1044S" gate="G$1" pin="3"/>
+<wire x1="154.94" y1="50.8" x2="149.86" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="50.8" x2="149.86" y2="33.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="9INDUBINV" class="0">
@@ -2222,9 +2220,11 @@ Divider</text>
 <pinref part="PNP1" gate="G$1" pin="B"/>
 <pinref part="R2" gate="G$1" pin="2"/>
 <pinref part="R6" gate="G$1" pin="1"/>
-<wire x1="-10.16" y1="83.82" x2="-2.54" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="-10.16" y1="83.82" x2="-7.62" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="-2.54" y1="83.82" x2="-2.54" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="-2.54" y1="83.82" x2="-2.54" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="-7.62" y1="83.82" x2="-2.54" y2="83.82" width="0.1524" layer="91"/>
+<junction x="-2.54" y="83.82"/>
 </segment>
 </net>
 <net name="N$9" class="0">
