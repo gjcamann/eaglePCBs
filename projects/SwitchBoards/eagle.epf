@@ -1,0 +1,27 @@
+[Eagle]
+Version="06 05 00"
+Platform="Windows"
+Serial="62191E841E-LSR-WLM-1EL"
+Globals="Globals"
+Desktop="Desktop"
+
+[Globals]
+AutoSaveProject=1
+UsedLibrary="C:/Program Files (x86)/EAGLE-6.5.0/lbr/wirepad.lbr"
+UsedLibrary="C:/cm/eaglePCBs/lbr/gc_pedal_parts.lbr"
+UsedLibrary="C:/cm/Adafruit-Eagle-Library/adafruit.lbr"
+UsedLibrary="C:/cm/eaglePCBs/lbr/mbp/resistors.lbr"
+UsedLibrary="C:/cm/eaglePCBs/lbr/mbp/capacitors-film.lbr"
+UsedLibrary="C:/cm/eaglePCBs/lbr/mbp/supply pins.lbr"
+UsedLibrary="C:/cm/eaglePCBs/lbr/mbp/diodes.lbr"
+UsedLibrary="C:/cm/eaglePCBs/lbr/mbp/transistors.lbr"
+
+[Win_1]
+Type="Control Panel"
+Loc="661 425 1491 824"
+State=2
+Number=0
+
+[Desktop]
+Screen="1920 1080"
+Window="Win_1"
