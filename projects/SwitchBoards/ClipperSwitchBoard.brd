@@ -61,7 +61,17 @@
 <wire x1="13.0812" y1="17.008" x2="0" y2="17.008" width="0" layer="20"/>
 <wire x1="0" y1="17.008" x2="0" y2="0" width="0" layer="20"/>
 <text x="4.445" y="11.43" size="1.016" layer="22" rot="MR270">ClipperSwitch</text>
-<text x="9.779" y="13.335" size="1.016" layer="22" rot="MR270">GJCAMANN2/2014</text>
+<text x="9.779" y="13.335" size="1.016" layer="22" rot="MR270">GJCAMANN(C)2014</text>
+<text x="2.54" y="1.27" size="0.8128" layer="22" rot="MR180">V1.0</text>
+<wire x1="3.048" y1="12.7" x2="4.445" y2="12.7" width="0.4064" layer="21"/>
+<wire x1="3.937" y1="13.208" x2="4.445" y2="12.7" width="0.4064" layer="21"/>
+<wire x1="4.445" y1="12.7" x2="3.937" y2="12.192" width="0.4064" layer="21"/>
+<wire x1="10.414" y1="2.54" x2="9.017" y2="2.54" width="0.4064" layer="21"/>
+<wire x1="9.525" y1="3.048" x2="9.017" y2="2.54" width="0.4064" layer="21"/>
+<wire x1="9.017" y1="2.54" x2="9.525" y2="2.032" width="0.4064" layer="21"/>
+<wire x1="7.747" y1="16.256" x2="7.493" y2="16.51" width="0.4064" layer="21"/>
+<wire x1="7.493" y1="16.51" x2="3.175" y2="16.51" width="0.4064" layer="21"/>
+<wire x1="3.175" y1="16.51" x2="2.921" y2="16.256" width="0.4064" layer="21"/>
 </plain>
 <libraries>
 <library name="gc_pedal_parts">
@@ -97,6 +107,21 @@
 <wire x1="1.143" y1="0.508" x2="1.143" y2="-0.508" width="0.127" layer="21"/>
 <wire x1="-1.27" y1="0" x2="-1.651" y2="0" width="0.127" layer="21"/>
 <wire x1="1.27" y1="0" x2="1.651" y2="0" width="0.127" layer="21"/>
+<wire x1="-1.905" y1="0" x2="-1.27" y2="0" width="0.127" layer="22"/>
+<wire x1="-1.27" y1="0" x2="-1.27" y2="0.381" width="0.127" layer="22"/>
+<wire x1="-1.27" y1="0.381" x2="-1.016" y2="0.635" width="0.127" layer="22" curve="-90"/>
+<wire x1="-1.016" y1="0.635" x2="1.016" y2="0.635" width="0.127" layer="22"/>
+<wire x1="1.016" y1="0.635" x2="1.27" y2="0.381" width="0.127" layer="22" curve="-90"/>
+<wire x1="1.27" y1="0.381" x2="1.27" y2="0" width="0.127" layer="22"/>
+<wire x1="1.905" y1="0" x2="1.27" y2="0" width="0.127" layer="22"/>
+<wire x1="-1.27" y1="0" x2="-1.27" y2="-0.381" width="0.127" layer="22"/>
+<wire x1="-1.27" y1="-0.381" x2="-1.016" y2="-0.635" width="0.127" layer="22" curve="90"/>
+<wire x1="-1.016" y1="-0.635" x2="1.016" y2="-0.635" width="0.127" layer="22"/>
+<wire x1="1.016" y1="-0.635" x2="1.27" y2="-0.381" width="0.127" layer="22" curve="90"/>
+<wire x1="1.016" y1="0.508" x2="1.016" y2="-0.508" width="0.127" layer="22"/>
+<wire x1="1.143" y1="0.508" x2="1.143" y2="-0.508" width="0.127" layer="22"/>
+<wire x1="1.143" y1="-0.508" x2="1.27" y2="-0.381" width="0.127" layer="22" curve="90"/>
+<wire x1="1.27" y1="-0.381" x2="1.27" y2="0" width="0.127" layer="22"/>
 </package>
 </packages>
 </library>
@@ -306,19 +331,19 @@ Please make sure your boards conform to these design rules.</description>
 <element name="U$1" library="gc_pedal_parts" package="SPDT_SOLDER" value="SPDT_SOLDER" x="6.604" y="7.112"/>
 <element name="U$2" library="gc_pedal_parts" package="CLIPPER_BLOCK" value="CLIPPER_BLOCK" x="11.684" y="3.937" rot="R90"/>
 <element name="U$3" library="gc_pedal_parts" package="CLIPPER_BLOCK" value="CLIPPER_BLOCK" x="11.684" y="11.557" rot="R90"/>
-<element name="U$4" library="gc_pedal_parts" package="CLIPPER_BLOCK" value="CLIPPER_BLOCK" x="1.524" y="3.937" rot="R270"/>
-<element name="U$5" library="gc_pedal_parts" package="CLIPPER_BLOCK" value="CLIPPER_BLOCK" x="1.524" y="11.557" rot="R270"/>
-<element name="+1" library="wirepad" package="2,15/1,0" value="" x="9.144" y="15.367" smashed="yes">
-<attribute name="NAME" x="10.541" y="15.24" size="1.27" layer="25" ratio="10"/>
-<attribute name="VALUE" x="9.144" y="16.367" size="0.0254" layer="27"/>
+<element name="U$4" library="gc_pedal_parts" package="CLIPPER_BLOCK" value="CLIPPER_BLOCK" x="1.524" y="3.937" rot="R90"/>
+<element name="U$5" library="gc_pedal_parts" package="CLIPPER_BLOCK" value="CLIPPER_BLOCK" x="1.524" y="11.557" rot="R90"/>
+<element name="+1" library="wirepad" package="2,15/1,0" value="" x="9.144" y="15.113" smashed="yes">
+<attribute name="NAME" x="10.541" y="14.986" size="1.27" layer="25" ratio="10"/>
+<attribute name="VALUE" x="9.144" y="16.113" size="0.0254" layer="27"/>
 </element>
-<element name="-2" library="wirepad" package="2,15/1,0" value="" x="4.064" y="15.367" smashed="yes">
-<attribute name="NAME" x="0.254" y="15.113" size="1.27" layer="25" ratio="10"/>
-<attribute name="VALUE" x="4.064" y="16.367" size="0.0254" layer="27"/>
+<element name="-2" library="wirepad" package="2,15/1,0" value="" x="4.064" y="15.113" smashed="yes">
+<attribute name="NAME" x="0.254" y="14.859" size="1.27" layer="25" ratio="10"/>
+<attribute name="VALUE" x="4.064" y="16.113" size="0.0254" layer="27"/>
 </element>
-<element name="-1" library="wirepad" package="2,15/1,0" value="" x="6.604" y="15.367" smashed="yes">
-<attribute name="NAME" x="1.524" y="15.113" size="1.27" layer="25" ratio="10"/>
-<attribute name="VALUE" x="6.604" y="16.367" size="0.0254" layer="27"/>
+<element name="-1" library="wirepad" package="2,15/1,0" value="" x="6.604" y="15.113" smashed="yes">
+<attribute name="NAME" x="1.524" y="14.859" size="1.27" layer="25" ratio="10"/>
+<attribute name="VALUE" x="6.604" y="16.113" size="0.0254" layer="27"/>
 </element>
 </elements>
 <signals>
@@ -327,7 +352,7 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="+1" pad="1"/>
 <wire x1="6.604" y1="7.112" x2="6.604" y2="7.747" width="0.4064" layer="1"/>
 <wire x1="6.604" y1="7.747" x2="9.144" y2="10.287" width="0.4064" layer="1"/>
-<wire x1="9.144" y1="10.287" x2="9.144" y2="15.367" width="0.4064" layer="1"/>
+<wire x1="9.144" y1="10.287" x2="9.144" y2="15.113" width="0.4064" layer="1"/>
 </signal>
 <signal name="N$3">
 <contactref element="U$2" pad="P$1"/>
@@ -348,33 +373,36 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="U$3" pad="P$2"/>
 <contactref element="-2" pad="1"/>
 <contactref element="-1" pad="1"/>
-<wire x1="1.524" y1="6.477" x2="1.524" y2="9.017" width="0.4064" layer="16"/>
-<wire x1="1.524" y1="9.017" x2="1.524" y2="11.557" width="0.4064" layer="16"/>
-<wire x1="1.524" y1="11.557" x2="2.794" y2="11.557" width="0.4064" layer="16"/>
-<wire x1="2.794" y1="11.557" x2="6.604" y2="15.367" width="0.4064" layer="16"/>
 <wire x1="11.684" y1="11.557" x2="11.684" y2="13.589" width="0.4064" layer="16"/>
 <wire x1="11.684" y1="13.589" x2="11.684" y2="14.097" width="0.4064" layer="16"/>
 <wire x1="11.684" y1="1.397" x2="10.414" y2="1.397" width="0.4064" layer="16"/>
 <wire x1="10.414" y1="1.397" x2="9.779" y2="2.286" width="0.4064" layer="16"/>
 <wire x1="9.779" y1="2.286" x2="9.779" y2="9.652" width="0.4064" layer="16"/>
 <wire x1="9.779" y1="9.652" x2="11.684" y2="11.557" width="0.4064" layer="16"/>
-<wire x1="4.064" y1="15.367" x2="6.604" y2="15.367" width="0.4064" layer="16"/>
-<wire x1="6.604" y1="15.367" x2="8.382" y2="13.589" width="0.4064" layer="16"/>
+<wire x1="4.064" y1="15.113" x2="6.604" y2="15.113" width="0.4064" layer="16"/>
+<wire x1="6.604" y1="15.113" x2="8.382" y2="13.589" width="0.4064" layer="16"/>
 <wire x1="8.382" y1="13.589" x2="11.684" y2="13.589" width="0.4064" layer="16"/>
+<wire x1="1.524" y1="14.097" x2="1.524" y2="11.557" width="0.4064" layer="16"/>
+<wire x1="1.524" y1="1.397" x2="2.667" y2="1.397" width="0.4064" layer="16"/>
+<wire x1="2.667" y1="1.397" x2="3.81" y2="2.54" width="0.4064" layer="16"/>
+<wire x1="3.81" y1="2.54" x2="3.81" y2="10.16" width="0.4064" layer="16"/>
+<wire x1="3.81" y1="10.16" x2="2.54" y2="11.43" width="0.4064" layer="16"/>
+<wire x1="2.54" y1="11.43" x2="1.651" y2="11.43" width="0.4064" layer="16"/>
+<wire x1="1.651" y1="11.43" x2="1.524" y2="11.557" width="0.4064" layer="16"/>
+<wire x1="1.524" y1="14.097" x2="2.54" y2="15.113" width="0.4064" layer="16"/>
+<wire x1="2.54" y1="15.113" x2="4.064" y2="15.113" width="0.4064" layer="16"/>
 </signal>
 <signal name="N$5">
 <contactref element="U$4" pad="P$1"/>
 <contactref element="U$4" pad="P$2"/>
 <contactref element="U$5" pad="P$3"/>
 <contactref element="U$1" pad="P$2"/>
-<wire x1="1.524" y1="14.097" x2="2.159" y2="14.097" width="0.4064" layer="1"/>
-<wire x1="2.159" y1="14.097" x2="3.302" y2="12.954" width="0.4064" layer="1"/>
-<wire x1="3.302" y1="12.954" x2="3.302" y2="11.557" width="0.4064" layer="1"/>
-<wire x1="3.302" y1="11.557" x2="3.302" y2="5.715" width="0.4064" layer="1"/>
-<wire x1="3.302" y1="5.715" x2="1.524" y2="3.937" width="0.4064" layer="1"/>
-<wire x1="1.524" y1="3.937" x2="1.524" y2="1.397" width="0.4064" layer="1"/>
-<wire x1="6.604" y1="11.811" x2="3.556" y2="11.811" width="0.4064" layer="1"/>
-<wire x1="3.556" y1="11.811" x2="3.302" y2="11.557" width="0.4064" layer="1"/>
+<wire x1="1.524" y1="3.937" x2="1.524" y2="6.477" width="0.4064" layer="1"/>
+<wire x1="1.524" y1="6.477" x2="1.524" y2="9.017" width="0.4064" layer="1"/>
+<wire x1="1.524" y1="9.017" x2="2.667" y2="9.017" width="0.4064" layer="1"/>
+<wire x1="2.667" y1="9.017" x2="5.08" y2="11.43" width="0.4064" layer="1"/>
+<wire x1="5.08" y1="11.43" x2="6.223" y2="11.43" width="0.4064" layer="1"/>
+<wire x1="6.223" y1="11.43" x2="6.604" y2="11.811" width="0.4064" layer="1"/>
 </signal>
 </signals>
 </board>

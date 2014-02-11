@@ -1661,18 +1661,18 @@ spacing: 6 holes
 <part name="CV/2" library="capacitors-elec" deviceset="063" device="1"/>
 <part name="CV" library="capacitors-elec" deviceset="063" device="1"/>
 <part name="CE" library="capacitors-elec" deviceset="063" device="1"/>
-<part name="GND" library="wirepad" deviceset="2,15/1,0" device=""/>
+<part name="G1" library="wirepad" deviceset="2,15/1,0" device=""/>
 <part name="IN" library="wirepad" deviceset="2,15/1,0" device=""/>
 <part name="BUF" library="wirepad" deviceset="2,15/1,0" device=""/>
 <part name="OUT" library="wirepad" deviceset="2,15/1,0" device=""/>
-<part name="VIN" library="wirepad" deviceset="2,15/1,0" device=""/>
+<part name="9V" library="wirepad" deviceset="2,15/1,0" device=""/>
 <part name="BOOST" library="potentiometers" deviceset="POTS" device=""/>
 <part name="VOL" library="potentiometers" deviceset="POTS" device="16MM"/>
 <part name="D2" library="diodes" deviceset="DO41" device=".2"/>
 <part name="CLIP" library="wirepad" deviceset="2,15/1,0" device=""/>
-<part name="GND1" library="wirepad" deviceset="2,15/1,0" device=""/>
-<part name="GND2" library="wirepad" deviceset="2,15/1,0" device=""/>
-<part name="GND3" library="wirepad" deviceset="2,15/1,0" device=""/>
+<part name="G2" library="wirepad" deviceset="2,15/1,0" device=""/>
+<part name="G3" library="wirepad" deviceset="2,15/1,0" device=""/>
+<part name="G4" library="wirepad" deviceset="2,15/1,0" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1694,18 +1694,18 @@ spacing: 6 holes
 <instance part="CV/2" gate="G$1" x="50.8" y="81.28" rot="R180"/>
 <instance part="CV" gate="G$1" x="55.88" y="86.36" rot="R180"/>
 <instance part="CE" gate="G$1" x="71.12" y="48.26" rot="R270"/>
-<instance part="GND" gate="1" x="48.26" y="33.02" rot="R90"/>
+<instance part="G1" gate="1" x="48.26" y="33.02" rot="R90"/>
 <instance part="IN" gate="1" x="30.48" y="58.42"/>
 <instance part="BUF" gate="1" x="73.66" y="53.34" rot="R180"/>
 <instance part="OUT" gate="1" x="99.06" y="55.88" rot="R180"/>
-<instance part="VIN" gate="1" x="63.5" y="93.98" rot="R270"/>
+<instance part="9V" gate="1" x="63.5" y="93.98" rot="R270"/>
 <instance part="BOOST" gate="G$1" x="71.12" y="40.64"/>
 <instance part="VOL" gate="G$1" x="91.44" y="55.88"/>
 <instance part="D2" gate="G$1" x="60.96" y="91.44"/>
 <instance part="CLIP" gate="1" x="93.98" y="63.5" rot="R180"/>
-<instance part="GND1" gate="1" x="53.34" y="33.02" rot="R90"/>
-<instance part="GND2" gate="1" x="63.5" y="33.02" rot="R90"/>
-<instance part="GND3" gate="1" x="71.12" y="33.02" rot="R90"/>
+<instance part="G2" gate="1" x="53.34" y="33.02" rot="R90"/>
+<instance part="G3" gate="1" x="63.5" y="33.02" rot="R90"/>
+<instance part="G4" gate="1" x="71.12" y="33.02" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -1781,7 +1781,7 @@ spacing: 6 holes
 <wire x1="63.5" y1="38.1" x2="63.5" y2="35.56" width="0.1524" layer="91"/>
 <junction x="63.5" y="35.56"/>
 <pinref part="C2" gate="G$1" pin="2"/>
-<pinref part="GND" gate="1" pin="P"/>
+<pinref part="G1" gate="1" pin="P"/>
 <wire x1="48.26" y1="35.56" x2="48.26" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="48.26" y1="35.56" x2="53.34" y2="35.56" width="0.1524" layer="91"/>
 <junction x="48.26" y="35.56"/>
@@ -1802,9 +1802,9 @@ spacing: 6 holes
 <pinref part="CV" gate="G$1" pin="-"/>
 <wire x1="50.8" y1="86.36" x2="43.18" y2="86.36" width="0.1524" layer="91"/>
 <junction x="43.18" y="86.36"/>
-<pinref part="GND1" gate="1" pin="P"/>
-<pinref part="GND2" gate="1" pin="P"/>
-<pinref part="GND3" gate="1" pin="P"/>
+<pinref part="G2" gate="1" pin="P"/>
+<pinref part="G3" gate="1" pin="P"/>
+<pinref part="G4" gate="1" pin="P"/>
 </segment>
 </net>
 <net name="N$11" class="0">
@@ -1850,9 +1850,9 @@ spacing: 6 holes
 <segment>
 <pinref part="RC" gate="G$1" pin="2"/>
 <pinref part="R1" gate="G$1" pin="1"/>
-<pinref part="VIN" gate="1" pin="P"/>
+<pinref part="9V" gate="1" pin="P"/>
 <junction x="63.5" y="91.44"/>
-<pinref part="VIN" gate="1" pin="P"/>
+<pinref part="9V" gate="1" pin="P"/>
 <pinref part="D2" gate="G$1" pin="C"/>
 <pinref part="CV" gate="G$1" pin="+"/>
 <wire x1="58.42" y1="86.36" x2="63.5" y2="86.36" width="0.1524" layer="91"/>
