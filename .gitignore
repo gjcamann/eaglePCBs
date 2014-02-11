@@ -11,4 +11,13 @@
 *.log
 *.raw
 
+# Gerber files
+*.ger
+*.gpi
+*.xln
+*.dri
+
+# Other files
+*.zip
+
 
