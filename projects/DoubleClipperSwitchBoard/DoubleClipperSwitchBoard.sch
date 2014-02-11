@@ -89,6 +89,21 @@
 <wire x1="1.143" y1="0.508" x2="1.143" y2="-0.508" width="0.127" layer="21"/>
 <wire x1="-1.27" y1="0" x2="-1.651" y2="0" width="0.127" layer="21"/>
 <wire x1="1.27" y1="0" x2="1.651" y2="0" width="0.127" layer="21"/>
+<wire x1="-1.905" y1="0" x2="-1.27" y2="0" width="0.127" layer="22"/>
+<wire x1="-1.27" y1="0" x2="-1.27" y2="0.381" width="0.127" layer="22"/>
+<wire x1="-1.27" y1="0.381" x2="-1.016" y2="0.635" width="0.127" layer="22" curve="-90"/>
+<wire x1="-1.016" y1="0.635" x2="1.016" y2="0.635" width="0.127" layer="22"/>
+<wire x1="1.016" y1="0.635" x2="1.27" y2="0.381" width="0.127" layer="22" curve="-90"/>
+<wire x1="1.27" y1="0.381" x2="1.27" y2="0" width="0.127" layer="22"/>
+<wire x1="1.905" y1="0" x2="1.27" y2="0" width="0.127" layer="22"/>
+<wire x1="-1.27" y1="0" x2="-1.27" y2="-0.381" width="0.127" layer="22"/>
+<wire x1="-1.27" y1="-0.381" x2="-1.016" y2="-0.635" width="0.127" layer="22" curve="90"/>
+<wire x1="-1.016" y1="-0.635" x2="1.016" y2="-0.635" width="0.127" layer="22"/>
+<wire x1="1.016" y1="-0.635" x2="1.27" y2="-0.381" width="0.127" layer="22" curve="90"/>
+<wire x1="1.016" y1="0.508" x2="1.016" y2="-0.508" width="0.127" layer="22"/>
+<wire x1="1.143" y1="0.508" x2="1.143" y2="-0.508" width="0.127" layer="22"/>
+<wire x1="1.143" y1="-0.508" x2="1.27" y2="-0.381" width="0.127" layer="22" curve="90"/>
+<wire x1="1.27" y1="-0.381" x2="1.27" y2="0" width="0.127" layer="22"/>
 </package>
 </packages>
 <symbols>
@@ -198,13 +213,17 @@
 </classes>
 <parts>
 <part name="U$1" library="gc_pedal_parts" deviceset="SPDT_SOLDER" device=""/>
-<part name="U$2" library="gc_pedal_parts" deviceset="CLIPPER_BLOCK" device=""/>
-<part name="U$3" library="gc_pedal_parts" deviceset="CLIPPER_BLOCK" device=""/>
+<part name="D2" library="gc_pedal_parts" deviceset="CLIPPER_BLOCK" device=""/>
+<part name="D1" library="gc_pedal_parts" deviceset="CLIPPER_BLOCK" device=""/>
 <part name="U$4" library="gc_pedal_parts" deviceset="CLIPPER_BLOCK" device=""/>
 <part name="U$5" library="gc_pedal_parts" deviceset="CLIPPER_BLOCK" device=""/>
 <part name="+1" library="wirepad" deviceset="2,15/1,0" device=""/>
 <part name="-2" library="wirepad" deviceset="2,15/1,0" device=""/>
 <part name="-1" library="wirepad" deviceset="2,15/1,0" device=""/>
+<part name="D4" library="gc_pedal_parts" deviceset="CLIPPER_BLOCK" device=""/>
+<part name="D3" library="gc_pedal_parts" deviceset="CLIPPER_BLOCK" device=""/>
+<part name="U$8" library="gc_pedal_parts" deviceset="CLIPPER_BLOCK" device=""/>
+<part name="U$9" library="gc_pedal_parts" deviceset="CLIPPER_BLOCK" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -212,13 +231,17 @@
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="25.4" y="55.88" rot="R270"/>
-<instance part="U$2" gate="G$1" x="45.72" y="63.5"/>
-<instance part="U$3" gate="G$1" x="40.64" y="60.96" rot="R180"/>
+<instance part="D2" gate="G$1" x="45.72" y="63.5"/>
+<instance part="D1" gate="G$1" x="40.64" y="60.96" rot="R180"/>
 <instance part="U$4" gate="G$1" x="55.88" y="50.8"/>
 <instance part="U$5" gate="G$1" x="50.8" y="48.26" rot="R180"/>
 <instance part="+1" gate="1" x="17.78" y="55.88"/>
-<instance part="-2" gate="1" x="63.5" y="48.26" rot="R90"/>
-<instance part="-1" gate="1" x="66.04" y="50.8" rot="R180"/>
+<instance part="-2" gate="1" x="78.74" y="48.26" rot="R90"/>
+<instance part="-1" gate="1" x="81.28" y="50.8" rot="R180"/>
+<instance part="D4" gate="G$1" x="58.42" y="63.5"/>
+<instance part="D3" gate="G$1" x="53.34" y="60.96" rot="R180"/>
+<instance part="U$8" gate="G$1" x="66.04" y="50.8"/>
+<instance part="U$9" gate="G$1" x="60.96" y="48.26" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -232,8 +255,8 @@
 </net>
 <net name="N$3" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="CATHODE"/>
-<pinref part="U$3" gate="G$1" pin="ANNODE"/>
+<pinref part="D2" gate="G$1" pin="CATHODE"/>
+<pinref part="D1" gate="G$1" pin="ANNODE"/>
 <wire x1="40.64" y1="63.5" x2="40.64" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="P$1"/>
 <wire x1="33.02" y1="60.96" x2="40.64" y2="60.96" width="0.1524" layer="91"/>
@@ -242,20 +265,9 @@
 </net>
 <net name="N$4" class="0">
 <segment>
-<pinref part="U$4" gate="G$1" pin="ANNODE"/>
-<pinref part="U$5" gate="G$1" pin="CATHODE"/>
-<wire x1="55.88" y1="48.26" x2="55.88" y2="50.8" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="ANNODE"/>
-<pinref part="U$3" gate="G$1" pin="CATHODE"/>
-<wire x1="45.72" y1="63.5" x2="45.72" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="-2" gate="1" pin="P"/>
-<pinref part="-1" gate="1" pin="P"/>
-<wire x1="45.72" y1="60.96" x2="63.5" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="63.5" y1="60.96" x2="63.5" y2="50.8" width="0.1524" layer="91"/>
-<junction x="45.72" y="60.96"/>
-<junction x="63.5" y="50.8"/>
-<wire x1="55.88" y1="50.8" x2="63.5" y2="50.8" width="0.1524" layer="91"/>
-<junction x="55.88" y="50.8"/>
+<pinref part="D1" gate="G$1" pin="CATHODE"/>
+<pinref part="D3" gate="G$1" pin="ANNODE"/>
+<wire x1="45.72" y1="60.96" x2="53.34" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -266,6 +278,45 @@
 <pinref part="U$1" gate="G$1" pin="P$2"/>
 <wire x1="33.02" y1="50.8" x2="50.8" y2="50.8" width="0.1524" layer="91"/>
 <junction x="50.8" y="50.8"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="U$4" gate="G$1" pin="ANNODE"/>
+<pinref part="U$8" gate="G$1" pin="CATHODE"/>
+<wire x1="55.88" y1="50.8" x2="60.96" y2="50.8" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$7" class="0">
+<segment>
+<pinref part="D4" gate="G$1" pin="ANNODE"/>
+<pinref part="D3" gate="G$1" pin="CATHODE"/>
+<wire x1="58.42" y1="60.96" x2="58.42" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="U$8" gate="G$1" pin="ANNODE"/>
+<pinref part="U$9" gate="G$1" pin="CATHODE"/>
+<wire x1="66.04" y1="48.26" x2="66.04" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="-2" gate="1" pin="P"/>
+<pinref part="-1" gate="1" pin="P"/>
+<wire x1="66.04" y1="50.8" x2="78.74" y2="50.8" width="0.1524" layer="91"/>
+<junction x="66.04" y="50.8"/>
+<junction x="78.74" y="50.8"/>
+<wire x1="58.42" y1="60.96" x2="78.74" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="60.96" x2="78.74" y2="50.8" width="0.1524" layer="91"/>
+<junction x="58.42" y="60.96"/>
+</segment>
+</net>
+<net name="N$6" class="0">
+<segment>
+<pinref part="D2" gate="G$1" pin="ANNODE"/>
+<pinref part="D4" gate="G$1" pin="CATHODE"/>
+<wire x1="45.72" y1="63.5" x2="53.34" y2="63.5" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$8" class="0">
+<segment>
+<pinref part="U$5" gate="G$1" pin="CATHODE"/>
+<pinref part="U$9" gate="G$1" pin="ANNODE"/>
+<wire x1="55.88" y1="48.26" x2="60.96" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
