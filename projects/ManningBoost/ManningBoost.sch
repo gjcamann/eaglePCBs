@@ -1677,6 +1677,9 @@ spacing: 6 holes
 <sheets>
 <sheet>
 <plain>
+<text x="64.516" y="53.848" size="1.778" layer="91">1</text>
+<text x="58.42" y="55.88" size="1.778" layer="91">2</text>
+<text x="64.516" y="61.468" size="1.778" layer="91">3</text>
 </plain>
 <instances>
 <instance part="Q1" gate="G1" x="60.96" y="58.42"/>
@@ -1693,16 +1696,19 @@ spacing: 6 holes
 <instance part="COUT" gate="G$1" x="76.2" y="63.5" rot="R180"/>
 <instance part="CV/2" gate="G$1" x="50.8" y="81.28" rot="R180"/>
 <instance part="CV" gate="G$1" x="55.88" y="86.36" rot="R180"/>
-<instance part="CE" gate="G$1" x="71.12" y="48.26" rot="R270"/>
+<instance part="CE" gate="G$1" x="71.12" y="50.8" rot="R270"/>
 <instance part="G1" gate="1" x="48.26" y="33.02" rot="R90"/>
 <instance part="IN" gate="1" x="30.48" y="58.42"/>
-<instance part="BUF" gate="1" x="73.66" y="53.34" rot="R180"/>
+<instance part="BUF" gate="1" x="71.12" y="55.88" smashed="yes" rot="R270">
+<attribute name="NAME" x="72.517" y="55.1942" size="1.778" layer="95"/>
+<attribute name="VALUE" x="67.818" y="57.023" size="1.778" layer="96" rot="R270"/>
+</instance>
 <instance part="OUT" gate="1" x="99.06" y="55.88" rot="R180"/>
 <instance part="9V" gate="1" x="63.5" y="93.98" rot="R270"/>
 <instance part="BOOST" gate="G$1" x="71.12" y="40.64"/>
 <instance part="VOL" gate="G$1" x="91.44" y="55.88"/>
 <instance part="D2" gate="G$1" x="60.96" y="91.44"/>
-<instance part="CLIP" gate="1" x="93.98" y="63.5" rot="R180"/>
+<instance part="CLIP" gate="1" x="91.44" y="66.04" rot="R270"/>
 <instance part="G2" gate="1" x="53.34" y="33.02" rot="R90"/>
 <instance part="G3" gate="1" x="63.5" y="33.02" rot="R90"/>
 <instance part="G4" gate="1" x="71.12" y="33.02" rot="R90"/>
@@ -1827,14 +1833,12 @@ spacing: 6 holes
 <segment>
 <pinref part="CE" gate="G$1" pin="-"/>
 <pinref part="BOOST" gate="G$1" pin="3"/>
-<wire x1="71.12" y1="43.18" x2="71.12" y2="45.72" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$7" class="0">
 <segment>
 <pinref part="CE" gate="G$1" pin="+"/>
 <pinref part="BUF" gate="1" pin="P"/>
-<wire x1="71.12" y1="53.34" x2="71.12" y2="50.8" width="0.1524" layer="91"/>
 <pinref part="Q1" gate="G1" pin="E"/>
 <pinref part="D1" gate="G$1" pin="A"/>
 <pinref part="RE" gate="G$1" pin="1"/>
